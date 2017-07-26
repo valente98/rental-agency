@@ -6,6 +6,6 @@ year, name_of_car, price, amount_of_car
 2017, dodge camaro, 59950, 12
 2017, dodge challenger, 39939, 12
 2017, dodge viper, 87895, 10
-2017, ford mustang shelby gT350R, 63645, 9
+2017, ford mustang shelby gt350r, 63645, 9
 2017, lamborghini huracan, 199800, 1
-2017, porche 911 gT3 rs, 175900, 2
+2017, porche 911 gt3 rs, 175900, 2
