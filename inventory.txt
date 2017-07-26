@@ -1,11 +1,11 @@
 i.d num, year, name_of_car, price, amount_of_car
-1, 2017, alfa romeo 4c coupe, 55900, 12
-2, 2017, audi r8 v10 plus, 191150 , 2
-3, 2017, bmw i8, 143400, 5
-4, 2017, corvette z06, 80445, 10
-5, 2017, cheverlet camaro, 59950, 12
-6, 2017, dodge challenger, 39939, 12
-7, 2017, dodge viper, 87895, 10
-8, 2017, ford mustang shelby gt350r, 63645, 9
-9, 2017, lamborghini huracan, 199800, 1
-10, 2017, porche 911 gt3 rs, 175900, 2
+1, 2017, alfa romeo 4c coupe, 55900.0, 12
+2, 2017, audi r8 v10 plus, 191150.0 , 2
+3, 2017, bmw i8, 143400.0, 5
+4, 2017, corvette z06, 80445.0, 10
+5, 2017, cheverlet camaro, 59950.0, 12
+6, 2017, dodge challenger, 39939.0, 12
+7, 2017, dodge viper, 87895.0, 10
+8, 2017, ford mustang shelby gt350r, 63645.0, 9
+9, 2017, lamborghini huracan, 199800.0, 1
+10, 2017, porche 911 gt3 rs, 175900.0, 2
