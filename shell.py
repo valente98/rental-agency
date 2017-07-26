@@ -14,12 +14,18 @@ def intro():
     \t9. Lamborghini Huracan
     \t10. Porche 911 GT3 RS \n''')
 
+def chosen_car(car, car_1):
+    print('you have chosen',car,'the renting price, $' + str(car_1))
+    return input('''\nWould you like to keep going or would you like to rent this car.\n
+    Type in the number of your choice.\n
+    \t1. If you would like to rent this car
+    \t2. If you would like to change car.\n''') 
+
 def main():
     cars = disk.list_of_cars()
     choice = intro()
     car = core.choice_of_car(choice, cars)
-    print(car)
     car_1 = core.calculate_price_of_renting_with_taxes(car)
-    print(car_1)
+    chosen_car(car, car_1)
 if __name__ == '__main__':
     main()
