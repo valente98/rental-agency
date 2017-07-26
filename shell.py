@@ -7,7 +7,7 @@ def intro():
     \t2. Audi R8 V10 Plus
     \t3. BMW i8
     \t4. Corvette z06
-    \t5. Dodge Camaro
+    \t5. Cheverlets Camaro
     \t6. Dodge Challenger
     \t7. Dodge Viper
     \t8. Ford Mustang Shelby GT350R
@@ -16,7 +16,10 @@ def intro():
     press Q to quit\n\n''' )
 
 def main():
+    cars = disk.list_of_cars()
     choice = intro()
+    car = core.choice_of_car(choice, cars)
+    print(car)
 
 if __name__ == '__main__':
     main()
