@@ -1,11 +1,11 @@
-year, name_of_car, price
-2017, alfa romeo 4c coupe, 55900
-2017, audi r8 v10 plus, 191150
-2017, bmw i8, 143400
-2017, corvette z06, 80445
-2017, dodge camaro, 59950
-2017, dodge challenger, 39939
-2017, dodge viper, 87895
-2017, ford mustang shelby gT350R, 63645
-2017, lamborghini huracan, 199800
-2017, porche 911 gT3 rs, 175900
+year, name_of_car, price, amount_of_car
+2017, alfa romeo 4c coupe, 55900, 12
+2017, audi r8 v10 plus, 191150 , 2
+2017, bmw i8, 143400, 5
+2017, corvette z06, 80445, 10
+2017, dodge camaro, 59950, 12
+2017, dodge challenger, 39939, 12
+2017, dodge viper, 87895, 10
+2017, ford mustang shelby gT350R, 63645, 9
+2017, lamborghini huracan, 199800, 1
+2017, porche 911 gT3 rs, 175900, 2
