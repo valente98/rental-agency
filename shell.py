@@ -1,7 +1,6 @@
 import core
 import disk
 def intro():
-    print('\n\tWelcome to Valente\'s 2017 Exotic Cars!')
     return input('''\n\tWhich car would you like to see?\n 
     \tType the number of the choice of your car\n
     \t1. Alfa Romeo 4c Coupe
@@ -23,6 +22,13 @@ def chosen_car(car, deposit, car_1):
     \t1. If you would like to rent this car.
     \t2. If you would like to change car.\n''') 
 
+def renting_or_returning():
+    print('\n\tWelcome to Valente\'s 2017 Exotic Cars!')
+    return input('''Hi! Are you returning a vehicle or renting a vehicle.
+    Type in the number of your choice.\n
+    \t1. I'm renting a vehicle.
+    \t2. I'm returning a vehicle.\n''')
+
 def main():
     cars = disk.list_of_cars()
     choice = intro()
@@ -33,6 +39,10 @@ def main():
             deposit = core.replacement(car)   
             car_1 = core.calculate_price_of_renting_with_taxes(car)
             decision = chosen_car(car, deposit, car_1)
+            if decision == '1' or decision.lower() == 'one':
+
+            elif decision == '2' or decision.lower() == 'two':
+                choice = intro()
             break
         else:
             print('Sorry invalid choice. Please try again.')
