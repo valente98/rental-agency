@@ -25,7 +25,8 @@ def chosen_car(car, deposit, car_1):
 def main():
     cars = disk.list_of_cars()
     choice = intro()
-    car = core.choice_of_car(choice, cars)
+    user_choice = core.set_num_equal_num(choice)
+    car = core.choice_of_car(user_choice, cars)
     deposit = core.replacement(car)   
     car_1 = core.calculate_price_of_renting_with_taxes(car)
     decision = chosen_car(car, deposit, car_1)
