@@ -13,7 +13,8 @@ def intro():
     \t7. Dodge Viper
     \t8. Ford Mustang Shelby GT350R
     \t9. Lamborghini Huracan
-    \t10. Porche 911 GT3 RS \n''')
+    \t10. Porche 911 GT3 RS 
+    type Q to quit the process\n''')
 def chosen_car(car, deposit, car_1):
     print('You have chosen',car,'the renting price per day is, $' + str(car_1)+'.')
     print('\nThe deposit of this vihicle will be, $'+str(deposit)+'.')
@@ -25,10 +26,17 @@ def chosen_car(car, deposit, car_1):
 def main():
     cars = disk.list_of_cars()
     choice = intro()
-    user_choice = core.set_num_equal_num(choice)
-    car = core.choice_of_car(user_choice, cars)
-    deposit = core.replacement(car)   
-    car_1 = core.calculate_price_of_renting_with_taxes(car)
-    decision = chosen_car(car, deposit, car_1)
+    while choice.lower() != 'q':
+        if choice == core.set_num_equal_num(choice):
+            user_choice = core.set_num_equal_num(choice)
+            car = core.choice_of_car(user_choice, cars)
+            deposit = core.replacement(car)   
+            car_1 = core.calculate_price_of_renting_with_taxes(car)
+            decision = chosen_car(car, deposit, car_1)
+            break
+        else:
+            print('Sorry invalid choice. Please try again.')
+        choice = intro()
+
 if __name__ == '__main__':
     main()
