@@ -20,7 +20,8 @@ def chosen_car(car, deposit, car_1):
     return input('''\nWould you like to keep going or would you like to rent this car.\n
     Type in the number of your choice.\n
     \t1. If you would like to rent this car.
-    \t2. If you would like to change car.\n''') 
+    \t2. If you would like to change car.
+    Type Q if you would like to end process\n''') 
 
 def renting_or_returning():
     print('\n\tWelcome to Valente\'s 2017 Exotic Cars!')
@@ -29,13 +30,18 @@ def renting_or_returning():
     \t1. I'm renting a vehicle.
     \t2. I'm returning a vehicle.\n''')
 
+def payment(decision):
+    if decsion == '1' or decision == 'one':
+        input('Great!! How many vehicle would you like to rent')
+
 def main():
     cars = disk.list_of_cars()
     choice = renting_or_returning()
     if choice == '1' or choice.lower() == 'one':
         picking = intro()
         while picking.lower() != 'q':
-            if picking == core.set_num_equal_num(picking):
+            l =['1','2','3','4','5','6','7','8','9','10','one','two','three','four','five','six','seven','eight','nine','ten']
+            if picking in l3 :
                 user_choice = core.set_num_equal_num(picking)
                 car = core.choice_of_car(user_choice, cars)
                 deposit = core.replacement(car)   
