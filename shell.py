@@ -30,9 +30,11 @@ def renting_or_returning():
     \t1. I'm renting a vehicle.
     \t2. I'm returning a vehicle.\n''')
 
-def payment(decision):
-    if decsion == '1' or decision == 'one':
-        input('Great!! How many vehicle would you like to rent')
+def quantity(decision):
+    if decision == '1' or decision == 'one':
+        return input('Great!! How many vehicle would you like to rent')
+    elif decision =='2' or decision == 'two':
+        main()
 
 def main():
     cars = disk.list_of_cars()
@@ -41,12 +43,13 @@ def main():
         picking = intro()
         while picking.lower() != 'q':
             l =['1','2','3','4','5','6','7','8','9','10','one','two','three','four','five','six','seven','eight','nine','ten']
-            if picking in l3 :
+            if picking in l:
                 user_choice = core.set_num_equal_num(picking)
                 car = core.choice_of_car(user_choice, cars)
                 deposit = core.replacement(car)   
                 car_1 = core.calculate_price_of_renting_with_taxes(car)
                 decision = chosen_car(car, deposit, car_1)
+                amount = quantity(decision)
                 break
             else:
                 print('Sorry invalid choice. Please try again.')
