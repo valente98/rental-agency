@@ -1,25 +1,8 @@
 def set_num_equal_num(picking):
-    if picking == '1' or picking.lower() == 'one':
-        return '1'
-    elif picking == '2' or picking.lower() == 'two':
-        return '2'
-    elif picking == '3' or picking.lower() == 'three':
-        return '3'
-    elif picking == '4' or picking.lower() == 'four':
-        return '4'
-    elif picking == '5' or picking.lower() == 'five':
-        return '5'
-    elif picking == '6' or picking.lower() == 'six':
-        return '6'
-    elif picking == '7' or picking.lower() == 'seven':
-        return '7'
-    elif picking == '8' or picking.lower() == 'eight':
-        return '8'
-    elif picking == '9' or picking.lower() == 'nine':
-        return '9' 
-    elif picking == '10' or picking.lower() == 'ten':
-        return '10'  
-
+    d = {'one':'1','two':'2','three':'3','four':'4','five':'5','six':'6','seven':'7','eight':'8','nine':'9','ten':'10'}
+    if picking in d.keys():
+        choice = d[picking]
+    return choice
 def choice_of_car(user_choice,cars):
     for item in cars:
         if item[0].startswith(user_choice):
