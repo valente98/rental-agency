@@ -32,7 +32,7 @@ def renting_or_returning():
 
 def quantity(decision):
     if decision == '1' or decision == 'one':
-        return input('Great!! How many vehicle would you like to rent')
+        return input('Great!! How many vehicles of the selected model would you like to rent')
     elif decision =='2' or decision == 'two':
         main()
 
