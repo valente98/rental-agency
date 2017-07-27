@@ -44,7 +44,7 @@ def main():
                 break
             else:
                 print('Sorry invalid choice. Please try again.')
-            choice = intro()
+            picking = intro()
 
 if __name__ == '__main__':
     main()
