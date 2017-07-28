@@ -1,5 +1,5 @@
 i.d num, name_of_car, price, amount_of_car
-1, 2017, Alfa Romeo 4c Coupe, 55900.0, 12.0
+1, 2017, Alfa Romeo 4c Coupe, 55900.0, 11
 2, 2017, Audi R8 V10 Plus, 191150.0, 2.0
 3, 2017, BMW i8, 143400.0, 5.0
 4, 2017, Corvette z06, 80445.0, 10.0
