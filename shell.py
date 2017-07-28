@@ -35,6 +35,11 @@ def quantity(decision):
         return input('Great!! How many vehicles of the selected model would you like to rent?\n')
     elif decision =='2' or decision == 'two':
         main()
+def day():
+    return input('Great! For how many days are you wanting to rent it for?\n')
+
+def total_payment(total):
+    print('Great choice of car!! your total price $'+ str(total) +'. Thank you for your time and purchase! Please proceed to one of our employees for all the paper work. Have a nice day.')
 
 def main():
     cars = disk.list_of_cars()
@@ -51,6 +56,8 @@ def main():
                 decision = chosen_car(car, deposit, car_1)
                 amount = quantity(decision)
                 disk.num_of_car(amount,car)
+                total = core.calculate_total_price(car_1, deposit)
+                total_payment(total)
                 break
             else:
                 print('Sorry invalid choice. Please try again.')
