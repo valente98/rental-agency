@@ -32,7 +32,7 @@ def renting_or_returning():
 
 def quantity(decision):
     if decision == '1' or decision == 'one':
-        return input('Great!! How many vehicles of the selected model would you like to rent')
+        return input('Great!! How many vehicles of the selected model would you like to rent?\n')
     elif decision =='2' or decision == 'two':
         main()
 
@@ -50,6 +50,7 @@ def main():
                 car_1 = core.calculate_price_of_renting_with_taxes(car)
                 decision = chosen_car(car, deposit, car_1)
                 amount = quantity(decision)
+                disk.num_of_car(amount,car)
                 break
             else:
                 print('Sorry invalid choice. Please try again.')
