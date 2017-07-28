@@ -15,3 +15,6 @@ def calculate_price_of_renting_with_taxes(car):
 
 def replacement(car):
     return car[3] * .1
+
+def calculate_total_price(car_1, deposit):
+    return round((car_1 + deposit), 2)
