@@ -6,7 +6,7 @@ def set_num_equal_num(picking):
 def choice_of_car(user_choice,cars):
     for item in cars:
         if item[0].startswith(user_choice):
-            return item[:4]
+            return item
 
 def calculate_price_of_renting_with_taxes(car):    
     renting = car[3] * .01
