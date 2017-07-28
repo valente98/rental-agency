@@ -13,7 +13,7 @@ def num_of_car(amount,car):
     str_l = ['i.d num, name_of_car, price, amount_of_car']
     left = list_of_cars()
     for item in left:
-        if item[0] == car:
+        if item == car:
             if int(amount) > int(item[4]):
                 return False
             else:
