@@ -59,7 +59,7 @@ def main():
                 disk.num_of_car(amount,car)
                 total = core.calculate_total_price(car_1, deposit, amount, days)
                 total_payment(total)
-                # disk.help_keep_history(total, car, amount)
+                disk.help_keep_history(total, car, amount)
                 break
             else:
                 print('Sorry invalid choice. Please try again.')
