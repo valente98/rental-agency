@@ -54,6 +54,7 @@ def main():
                 deposit = core.replacement(car)   
                 car_1 = core.calculate_price_of_renting_with_taxes(car)
                 decision = chosen_car(car, deposit, car_1)
+                days = day()
                 amount = quantity(decision)
                 disk.num_of_car(amount,car)
                 total = core.calculate_total_price(car_1, deposit)
