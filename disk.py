@@ -27,17 +27,7 @@ def num_of_car(amount,car):
         file.write(message)
     return True
 
-# def help_keep_history():
-#     message = '\n{}, {}, ${}'.format(get_gas_type, amount, price)
-#     with open('log.txt', 'a') as file:
-#         file.write(message)
-
-def in_the_log():
-    left = []
-    with open('history.txt', 'r') as file:
-        file.readline()
-        lines = file.readlines()
-    for line in lines:
-        split_string = line.strip().split(', ')
-        left.append([split_string[0], float(split_string[1]), float(split_string[2].strip().replace('$', ''))])
-    return left
+def help_keep_history(total, car, amount):
+    message = '\n{}, ${}, {}'.format(car[:3], total, amount)
+    with open('history.txt', 'a') as file:
+        file.write(message)
