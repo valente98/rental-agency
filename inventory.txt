@@ -1,11 +1,11 @@
 i.d num, name_of_car, price, amount_of_car
-1, 2017, Alfa Romeo 4c Coupe, 55900.0, 12
-2, 2017, Audi R8 V10 Plus, 191150.0, 12
-3, 2017, BMW i8, 143400.0, 12
-4, 2017, Corvette z06, 80445.0, 12
-5, 2017, Cheverlet Camaro, 59950.0, 12
-6, 2017, Dodge Challenger, 39939.0, 12
-7, 2017, Dodge Viper, 87895.0, 12
-8, 2017, Ford Mustang Shelby GT350R, 63645.0, 12
-9, 2017, Lamborghini Huracan, 199800.0, 12
-10, 2017, Porche 911 GT3 RS, 175900.0, 12
+1, 2017, Alfa Romeo 4c Coupe, 55900.0, 11
+2, 2017, Audi R8 V10 Plus, 191150.0, 10.0
+3, 2017, BMW i8, 143400.0, 12.0
+4, 2017, Corvette z06, 80445.0, 12.0
+5, 2017, Cheverlet Camaro, 59950.0, 12.0
+6, 2017, Dodge Challenger, 39939.0, 12.0
+7, 2017, Dodge Viper, 87895.0, 12.0
+8, 2017, Ford Mustang Shelby GT350R, 63645.0, 12.0
+9, 2017, Lamborghini Huracan, 199800.0, 12.0
+10, 2017, Porche 911 GT3 RS, 175900.0, 12.0
