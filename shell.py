@@ -14,6 +14,7 @@ def intro():
     \t9. Lamborghini Huracan\n
     \t10. Porche 911 GT3 RS \n
     type Q to quit the process\n''')
+
 def chosen_car(car, deposit, car_1):
     print('You have chosen',car,'the renting price per day is, $' + str(car_1)+'.')
     print('\nThe deposit of this vihicle will be, $'+str(deposit)+'.')
@@ -35,11 +36,36 @@ def quantity(decision):
         return input('Great!! How many vehicles of the selected model would you like to rent?\n')
     elif decision =='2' or decision == 'two':
         main()
+    else:
+        print('Sorry invalid choice.')
+        chosen_car(car, deposit, car_1)
 def day():
     return input('Great! For how many days are you wanting to rent it for?\n')
 
 def total_payment(total):
     print('Great choice of car!! your total price $'+ str(total) +'. Thank you for your time and purchase! Please proceed to one of our employees for all the paper work. Have a nice day.')
+
+def return_intro():
+        return input('''\nWhich car was the car you have rented?\n 
+    Type the number of the choice of your car\n
+    \t1. Alfa Romeo 4c Coupe\n
+    \t2. Audi R8 V10 Plus\n
+    \t3. BMW i8\n
+    \t4. Corvette z06\n
+    \t5. Cheverlets Camaro\n
+    \t6. Dodge Challenger\n
+    \t7. Dodge Viper\n
+    \t8. Ford Mustang Shelby GT350R\n
+    \t9. Lamborghini Huracan\n
+    \t10. Porche 911 GT3 RS \n
+    type Q to quit the process\n''')
+
+def return_amount():
+    return input('Great! How many cars are you returning?\n')
+
+def returning_deposit(depository):
+    print('Ok. Since you return the car your returning deposit money wil be $'+str(depository))
+    print('Thanks for renting a car with us. Have a good day.')
 
 def main():
     cars = disk.list_of_cars()
@@ -64,6 +90,22 @@ def main():
             else:
                 print('Sorry invalid choice. Please try again.')
             picking = intro()
-
+    elif choice == '2' or choice.lower() == '2':
+        picking = return_intro()
+        while picking.lower() != 'q':
+            l =['1','2','3','4','5','6','7','8','9','10','one','two','three','four','five','six','seven','eight','nine','ten']
+            if picking in l:
+                user_choice = core.set_num_equal_num(picking)
+                car = core.choice_of_car(user_choice, cars)
+                deposit = core.replacement(car)   
+                amount = return_amount()
+                depository = core.calc_return_depository(car, amount)
+                returning_deposit(depository)
+                break
+            else:
+                print('Sorry invalid choice. Please try again.')
+    else:
+        print('Sorry invalid choice. Please try again.')
+        choice = renting_or_returning()
 if __name__ == '__main__':
     main()
