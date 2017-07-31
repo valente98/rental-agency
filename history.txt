@@ -1,0 +1,1 @@
+i.d num and name_of_car, price, amount_of_car
