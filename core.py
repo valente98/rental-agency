@@ -19,3 +19,5 @@ def replacement(car):
 def calculate_total_price(car_1, deposit, amount, days):
     return round((((car_1 + deposit) * int(amount)) * int(days)), 2)
 
+def calc_return_depository(car, amount):
+    return round(((car[3] * .1) * int(amount)))
