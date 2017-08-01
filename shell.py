@@ -105,15 +105,20 @@ def main():
             disk.help_keep_history(total, car, decision)
             exit()
     elif choice == '2' or choice == '2':
-        picking = return_intro()
-        user_choice = core.set_num_equal_num(picking)
-        car = core.choice_of_car(user_choice, cars)
-        deposit = core.replacement(car)   
-        amount = return_amount()
-        disk.return_inventory(amount, cars, car)
-        depository = core.calc_return_depository(car, amount)
-        returning_deposit(depository)
-        exit()
+        while True:
+            picking = return_intro()
+            l =['1','2','3','4','5','6','7','8','9','10','one','two','three','four','five','six','seven','eight','nine','ten']
+            if picking in l:
+                user_choice = core.set_num_equal_num(picking)
+                car = core.choice_of_car(user_choice, cars)
+                deposit = core.replacement(car)   
+                amount = return_amount()
+                disk.return_inventory(amount, cars, car)
+                depository = core.calc_return_depository(car, amount)
+                returning_deposit(depository)
+                exit()
+            else:
+                print('Sorry invalid choice.')
 
 if __name__ == '__main__':
     main()
