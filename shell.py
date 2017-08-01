@@ -1,7 +1,7 @@
 import core
 import disk
 def intro():
-    return input('''\n\tWhich car would you like to see?\n 
+    msg = '''\n\tWhich car would you like to see?\n 
     Type the number of the choice of your car\n
     \t1. Alfa Romeo 4c Coupe\n
     \t2. Audi R8 V10 Plus\n
@@ -13,32 +13,50 @@ def intro():
     \t8. Ford Mustang Shelby GT350R\n
     \t9. Lamborghini Huracan\n
     \t10. Porche 911 GT3 RS \n
-    type Q to quit the process\n''')
+    type Q to quit the process\n'''
+    while True:
+        picking = input(msg)
+        l =['1','2','3','4','5','6','7','8','9','10','one','two','three','four','five','six','seven','eight','nine','ten']
+        if picking in l:
+            return picking
+        elif picking.lower() == 'q':
+            exit() 
+        else:
+            print('error')
+            continue
 
 def chosen_car(car, deposit, car_1):
     print('You have chosen',car,'the renting price per day is, $' + str(car_1)+'.')
     print('\nThe deposit of this vihicle will be, $'+str(deposit)+'.')
-    return input('''\nWould you like to keep going or would you like to rent this car.\n
+    msg = '''\nWould you like to keep going or would you like to rent this car.\n
     Type in the number of your choice.\n
     \t1. If you would like to rent this car.
     \t2. If you would like to change car.
-    Type Q if you would like to end process\n''') 
+    Type Q if you would like to end process\n'''
+    while True:
+        decision = input(msg) 
+        if decision == '1' or decision == 'one':
+            return input('Great!! How many vehicles of the selected model would you like to rent?\n')
+        elif decision =='2' or decision == 'two':
+            picking = intro()
+        elif decision.lower() == 'q':
+            exit()
+        else:
+            print('Sorry invalid choice.')
 
 def renting_or_returning():
     print('\n\tWelcome to Valente\'s 2017 Exotic Cars!')
-    return input('''Hi! Are you returning a vehicle or renting a vehicle.\n
+    msg = '''Hi! Are you returning a vehicle or renting a vehicle.\n
     Type in the number of your choice.\n
     \t1. I'm renting a vehicle.
-    \t2. I'm returning a vehicle.\n''')
+    \t2. I'm returning a vehicle.\n'''
+    while True:
+        choice = input(msg).lower()
+        if choice in ['1', 'one', 'two', '2']:
+            return choice
+        else:
+            print('error, choose correctly')
 
-def quantity(decision):
-    if decision == '1' or decision == 'one':
-        return input('Great!! How many vehicles of the selected model would you like to rent?\n')
-    elif decision =='2' or decision == 'two':
-        main()
-    else:
-        print('Sorry invalid choice.')
-        chosen_car(car, deposit, car_1)
 def day():
     return input('Great! For how many days are you wanting to rent it for?\n')
 
@@ -70,42 +88,31 @@ def returning_deposit(depository):
 def main():
     cars = disk.list_of_cars()
     choice = renting_or_returning()
-    if choice == '1' or choice.lower() == 'one':
-        picking = intro()
-        while picking.lower() != 'q':
-            l =['1','2','3','4','5','6','7','8','9','10','one','two','three','four','five','six','seven','eight','nine','ten']
-            if picking in l:
-                user_choice = core.set_num_equal_num(picking)
-                car = core.choice_of_car(user_choice, cars)
-                deposit = core.replacement(car)   
-                car_1 = core.calculate_price_of_renting_with_taxes(car)
-                decision = chosen_car(car, deposit, car_1)
-                amount = quantity(decision)
-                days = day()
-                disk.num_of_car(amount,car)
-                total = core.calculate_total_price(car_1, deposit, amount, days)
-                total_payment(total)
-                disk.help_keep_history(total, car, amount)
-                break
-            else:
-                print('Sorry invalid choice. Please try again.')
+    if choice == '1' or choice == 'one':
+        while True:
             picking = intro()
-    elif choice == '2' or choice.lower() == '2':
-        picking = return_intro()
-        while picking.lower() != 'q':
-            l =['1','2','3','4','5','6','7','8','9','10','one','two','three','four','five','six','seven','eight','nine','ten']
-            if picking in l:
-                user_choice = core.set_num_equal_num(picking)
-                car = core.choice_of_car(user_choice, cars)
-                deposit = core.replacement(car)   
-                amount = return_amount()
-                depository = core.calc_return_depository(car, amount)
-                returning_deposit(depository)
+            user_choice = core.set_num_equal_num(picking)
+            car = core.choice_of_car(user_choice, cars)
+            deposit = core.replacement(car)   
+            car_1 = core.calculate_price_of_renting_with_taxes(car)
+            decision = chosen_car(car, deposit, car_1)
+            if not decision:
                 break
-            else:
-                print('Sorry invalid choice. Please try again.')
-    else:
-        print('Sorry invalid choice. Please try again.')
-        choice = renting_or_returning()
+            days = day()
+            disk.num_of_car(decision, car)
+            total = core.calculate_total_price(car_1, deposit, decision, days)
+            total_payment(total)
+            disk.help_keep_history(total, car, decision)
+            exit()
+    elif choice == '2' or choice == '2':
+        picking = return_intro()
+        user_choice = core.set_num_equal_num(picking)
+        car = core.choice_of_car(user_choice, cars)
+        deposit = core.replacement(car)   
+        amount = return_amount()
+        depository = core.calc_return_depository(car, amount)
+        returning_deposit(depository)
+        exit()
+
 if __name__ == '__main__':
     main()
