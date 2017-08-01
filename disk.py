@@ -31,3 +31,16 @@ def help_keep_history(total, car, decision):
     message = '\n{}, ${}, {}'.format(car[:3], total, decision)
     with open('history.txt', 'a') as file:
         file.write(message)
+
+def return_inventory(amount, cars, car):
+    str_l = ['i.d num, name_of_car, price, amount_of_car']
+    for item in cars:
+        if item == car:
+            item[4] += int(amount)
+        item[3]=str(item[3])
+        item[4]= str(item[4])
+        str_l.append(', '.join(item))
+        message = '\n'.join(str_l)
+
+    with open('inventory.txt', 'w') as file:
+        file.write(message)
