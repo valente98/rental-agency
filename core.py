@@ -20,4 +20,4 @@ def calculate_total_price(car_1, deposit, decision, days):
     return round((((car_1 + deposit) * int(decision)) * int(days)), 2)
 
 def calc_return_depository(car, amount):
-    return round((float(car[3]) * .01) * float(amount), 2)
+    return round((float(car[3]) * .1) * float(amount), 2)
