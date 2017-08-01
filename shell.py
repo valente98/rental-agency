@@ -110,6 +110,7 @@ def main():
         car = core.choice_of_car(user_choice, cars)
         deposit = core.replacement(car)   
         amount = return_amount()
+        disk.return_inventory(amount, cars, car)
         depository = core.calc_return_depository(car, amount)
         returning_deposit(depository)
         exit()
