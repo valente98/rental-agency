@@ -14,6 +14,11 @@ def set_num_equal_num(picking):
         picking = d[picking]
     return picking
 def choice_of_car(user_choice,cars):
+    '''(string, list) -> list
+    takes in a list and a string and returns the list that starts with the string
+    >>> choice_of_car('1', [['1', 'b', 'c']])
+    ['1', 'b', 'c']
+    '''
     for item in cars:
         if item[0].startswith(user_choice):
             return item
