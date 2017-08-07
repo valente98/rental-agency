@@ -34,10 +34,31 @@ def calculate_price_of_renting_with_taxes(car):
     return round((renting + sales_tax), 2)
 
 def replacement(car):
+    '''list -> float
+
+    takes a list and returns a the float number of the deposit
+    
+    >>> replacement(['a', 'b', 'c', 100])
+    10.0
+    '''
     return car[3] * .1
 
 def calculate_total_price(car_1, deposit, decision, days):
+    '''(float, float, int, int) -> float
+
+    return the float of the total price
+
+    >>> calculate_total_price(12.33, 12.33, 1, 2)
+    49.32
+    '''
     return round((((car_1 + deposit) * int(decision)) * int(days)), 2)
 
 def calc_return_depository(car, amount):
+    '''(list, float) -> float
+
+    return the float of the deposit to return it
+     
+    >>> calc_return_depository(['a', 'b', 'c', 300], 2)
+    60.0
+    '''
     return round((float(car[3]) * .1) * float(amount), 2)
