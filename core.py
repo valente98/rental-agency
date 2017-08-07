@@ -1,4 +1,14 @@
 def set_num_equal_num(picking):
+    ''' string -> string 
+    takes in a string and returns the variable string of it
+    
+    >>> set_num_equal_num('one')
+    '1'
+    >>> set_num_equal_num('two')
+    '2'
+    >>> set_num_equal_num('three')
+    '3'
+    '''
     d = {'one':'1','two':'2','three':'3','four':'4','five':'5','six':'6','seven':'7','eight':'8','nine':'9','ten':'10'}
     if picking in d.keys():
         picking = d[picking]
