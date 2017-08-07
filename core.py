@@ -23,7 +23,12 @@ def choice_of_car(user_choice,cars):
         if item[0].startswith(user_choice):
             return item
 
-def calculate_price_of_renting_with_taxes(car):    
+def calculate_price_of_renting_with_taxes(car):
+    '''list -> float
+    takes a list and return the float of the total price
+    >>> calculate_price_of_renting_with_taxes(['a', 'b', 'c', 20])
+    0.21
+    '''    
     renting = car[3] * .01
     sales_tax = renting * .07
     return round((renting + sales_tax), 2)
