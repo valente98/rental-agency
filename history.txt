@@ -1,6 +1,2 @@
-i.d num and name_of_car, price, amount_of_car,
-['1', '2017', 'Alfa Romeo 4c Coupe'], $6188.13, 1
-['1', '2017', 'Alfa Romeo 4c Coupe'], $6188.13, 1
-['1', '2017', 'Alfa Romeo 4c Coupe'], $6188.13, 1
-['1', '2017', 'Alfa Romeo 4c Coupe'], $6188.13, 1
-['1', '2017', 'Alfa Romeo 4c Coupe'], $6188.13, 1
+name, i.d num and name_of_car, price, amount_of_car,
+valente, $['1', '2017', 'Alfa Romeo 4c Coupe'], 6188.13
