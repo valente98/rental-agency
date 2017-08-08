@@ -62,17 +62,28 @@ def name():
 
 def renting_or_returning():
     msg = '''Hi! Are you returning a vehicle or renting a vehicle.\n
-    Type in the number of your choice.\n
+    Type in the number of your choice.
+    Type 3 if you want to see the revenue\n
     \t1. I'm renting a vehicle.
-    \t2. I'm returning a vehicle.\n'''
+    \t2. I'm returning a vehicle.
+    \t3. revenue\n'''
     while True:
         choice = input(msg).lower()
-        if choice in ['1', 'one', 'two', '2']:
+        if choice in ['1', 'one', 'two', '2', 'three', '3']:
             return choice
         else:
             print('error, choose correctly')
 
-
+def check_revenue():
+    msg = '''Type in the password to see the revenue'''
+    while True:
+        choice = input(msg)
+        if choice in ['1998']
+            return True
+        else:
+            print('Sorry incorrect Password.')
+            exit()
+            
 def day():
     return input('Great! For how many days are you wanting to rent it for?\n')
 
@@ -130,7 +141,7 @@ def main():
             total_payment(total)
             disk.help_keep_history(user_name, total, car, decision)
             exit()
-    elif choice == '2' or choice == '2':
+    elif choice == '2' or choice == 'two':
         while True:
             picking = return_intro()
             l = [
@@ -148,6 +159,8 @@ def main():
                 returning_deposit(depository)
                 disk.update_history(user_name, amount, deposit)
                 exit()
+    elif choice == '3' or choice == '3':
+
             else:
                 print('Sorry invalid choice.')
 
