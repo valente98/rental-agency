@@ -74,16 +74,18 @@ def renting_or_returning():
         else:
             print('error, choose correctly')
 
+
 def check_revenue():
-    msg = '''Type in the password to see the revenue'''
+    msg = '''Type in the password to see the revenue\n'''
     while True:
         choice = input(msg)
-        if choice in ['1998']
-            return True
+        if choice == '1998':
+            return choice
         else:
             print('Sorry incorrect Password.')
             exit()
-            
+
+
 def day():
     return input('Great! For how many days are you wanting to rent it for?\n')
 
@@ -159,8 +161,16 @@ def main():
                 returning_deposit(depository)
                 disk.update_history(user_name, amount, deposit)
                 exit()
-    elif choice == '3' or choice == '3':
-
+            else:
+                print('Sorry invalid choice')
+    elif choice == '3' or choice == 'three':
+        while True:
+            code = check_revenue()
+            if code == '1998':
+                left = disk.history()
+                total = core.revenue_history(left)
+                print('your total revenue is ${:.2f}'.format(total))
+                exit()
             else:
                 print('Sorry invalid choice.')
 
