@@ -29,3 +29,8 @@ def test_calculate_total_price():
 def test_calc_return_depository():
     car = ['a', 'b', 'c', 25]
     assert core.calc_return_depository(car, 3) == 7.5
+
+
+def test_revenue_history():
+    car = [['a', 'b', 'c', 'd', 25, 0], ['a', 'b', 'c', 'd', 25, 2]]
+    assert core.revenue_history(car) == 25
