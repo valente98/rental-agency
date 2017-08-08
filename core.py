@@ -79,3 +79,12 @@ def calc_return_depository(car, amount):
     60.0
     '''
     return round((float(car[3]) * .1) * float(amount), 2)
+
+
+def revenue_history(left):
+    """return float value of total dollars spent"""
+    price = 0
+    for item in left:
+        if item[5] == 0:
+            price += item[4]
+    return price
