@@ -112,7 +112,7 @@ def returning_deposit(depository):
 
 def main():
     cars = disk.list_of_cars()
-    user_name = name()
+    user_name = name().lower()
     choice = renting_or_returning()
     if choice == '1' or choice == 'one':
         while True:
@@ -146,6 +146,7 @@ def main():
                 disk.return_inventory(amount, cars, car)
                 depository = core.calc_return_depository(car, amount)
                 returning_deposit(depository)
+                disk.update_history(user_name, amount, deposit)
                 exit()
             else:
                 print('Sorry invalid choice.')
