@@ -1,2 +1,4 @@
-name, i.d num and name_of_car, price, amount_of_car,
-valente, $['1', '2017', 'Alfa Romeo 4c Coupe'], 6188.13
+name, i.d num and name_of_car, price, amount_of_cars
+edgar, ['2', '2017', 'Audi R8 V10 Plus'], 6135.93, 0
+angel, ['9', '2017', 'Lamborghini Huracan'], 2137.8600000000006, 0
+valente, ['1', '2017', 'Alfa Romeo 4c Coupe'], 6188.13, 1
