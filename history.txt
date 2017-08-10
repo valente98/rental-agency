@@ -1,3 +1,4 @@
-name, i.d num and name_of_car, price, amount_of_cars
+name, i.d num and name_of_car, price, amount_of_car
 edgar, ['2', '2017', 'Audi R8 V10 Plus'], 6135.93, 0
+valente, ['1', '2017', 'Alfa Romeo 4c Coupe'], 598.13, 0
 valente, ['1', '2017', 'Alfa Romeo 4c Coupe'], 6188.13, 1
